@@ -4,7 +4,7 @@ var app = express();
 
 app.get('/', function (req, res) {
 	var q = req.query.q || "";
-	var md5Value = utility.md5(q);
+	var md5Value = utility.md5(q);  // md5 hash
 	res.send(md5Value);
 })
 
