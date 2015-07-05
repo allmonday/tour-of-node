@@ -1,9 +1,11 @@
 var G = require('./global');
 
 function add() {
-	G.GLOBAL.counter += 1;
-	G.GLOBAL.queue.push('hello~');
-	G.GLOBAL.queue.push('world~');
+	[1,2,3,4,5,6,7,8,9].map(function (i) {
+		G.GLOBAL.q.push(i, function (err) {
+			console.log('runner 2');
+		});
+	})
 }
 
 exports.add = add;
